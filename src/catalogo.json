@@ -1,0 +1,131 @@
+[
+  {
+    "id": "skincare",
+    "name": "Skincare Coreano",
+    "facebook": "https://www.facebook.com/AccionRegiaSkincare",
+    "products": [
+      {
+        "code": "X19087",
+        "name": "Kit 4 pasos Noche",
+        "description": "Limpieza, exfoliación y mascarilla en un set de cuidado nocturno.",
+        "photo": "https://image.atomy.com/MX/goods/X19087/org/791/250731000045791.jpg"
+      },
+      {
+        "code": "X00276",
+        "name": "Protector Solar Beige",
+        "description": "La ficha indicada corresponde a Absolute Essence Sunscreen.",
+        "photo": "https://image.atomy.com/MX/goods/X00276/org/785/250717000044785.jpg"
+      },
+      {
+        "code": "X00286",
+        "name": "Protector Solar en Barra",
+        "description": "Protector solar en formato de barra.",
+        "photo": "https://image.atomy.com/MX/goods/X00286/org/766/250717000044766.jpg"
+      },
+      {
+        "code": "X00465",
+        "name": "Mascarilla Facial",
+        "description": "Mascarilla facial de la línea Daily Expert Mask Moisture.",
+        "photo": "https://image.atomy.com/MX/goods/X00465/org/771/250717000044771.jpg"
+      },
+      {
+        "code": "X19088",
+        "name": "Rutina Antienvejecimiento",
+        "description": "Set de cuidado facial de la línea Absolute.",
+        "photo": "https://image.atomy.com/MX/goods/X19088/org/774/250731000045774.jpg"
+      },
+      {
+        "code": "X04721",
+        "name": "Delineador de cejas",
+        "description": "Delineador Adelica en tono café oscuro.",
+        "photo": "https://image.atomy.com/MX/goods/X04721/org/856/250717000044856.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hogar",
+    "name": "Hogar",
+    "facebook": "https://www.facebook.com/AccionRegiaHogar/",
+    "products": [
+      {
+        "code": "X00505",
+        "name": "Pasta Dental",
+        "description": "Set de pasta dental en tubos de 200 g.",
+        "photo": "https://image.atomy.com/MX/goods/X00505/org/024/250718000045024.jpg"
+      },
+      {
+        "code": "X00681",
+        "name": "Aceite para el Cabello",
+        "description": "Aceite esencial para el cabello en presentación individual.",
+        "photo": "https://image.atomy.com/MX/goods/X00681/org/061/250718000045061.jpg"
+      },
+      {
+        "code": "X00545",
+        "name": "Tratamiento para manos",
+        "description": "Kit de cuatro piezas para el cuidado de las manos.",
+        "photo": "https://image.atomy.com/MX/goods/X00545/org/130/250718000045130.jpg"
+      },
+      {
+        "code": "X00861",
+        "name": "Detergente para ropa",
+        "description": "Detergente para ropa en presentación individual.",
+        "photo": "https://image.atomy.com/MX/goods/X00861/org/144/250718000045144.jpg"
+      },
+      {
+        "code": "X00880",
+        "name": "Olla Medicook",
+        "description": "Wok MediCook de 32 cm.",
+        "photo": "https://image.atomy.com/MX/goods/X00880/org/182/250718000045182.jpg"
+      },
+      {
+        "code": "X19048",
+        "name": "Set de Ollas Medicook",
+        "description": "Juego de cocina MediCook.",
+        "photo": "https://image.atomy.com/MX/goods/X19048/org/048/thumb_x19048_0002.jpg"
+      }
+    ]
+  },
+  {
+    "id": "bienestar",
+    "name": "Nutrición y Bienestar",
+    "facebook": "https://www.facebook.com/profile.php?id=61596656691481",
+    "products": [
+      {
+        "code": "X00930",
+        "name": "Sopa de Papa",
+        "description": "Ramen de papa Atomy.",
+        "photo": "https://image.atomy.com/MX/goods/X00930/org/236/250718000045236.jpg"
+      },
+      {
+        "code": "X04059",
+        "name": "Colágeno",
+        "description": "Colágeno en polvo.",
+        "photo": "https://image.atomy.com/MX/goods/X04059/org/442/260409000051442.jpg"
+      },
+      {
+        "code": "X19069",
+        "name": "Energía Doble",
+        "description": "Presentación Energía Doble de Atomy.",
+        "photo": "https://image.atomy.com/MX/goods/X19069/org/187/251113000048187.jpg"
+      },
+      {
+        "code": "X00973",
+        "name": "Café Arábica",
+        "description": "Café arábica en presentación de 50 porciones.",
+        "photo": "https://image.atomy.com/MX/goods/X00973/org/968/250718000044968.jpg"
+      },
+      {
+        "code": "X19084",
+        "name": "Probióticos",
+        "description": "Presentación de probióticos indicada en la ficha oficial.",
+        "photo": "https://image.atomy.com/MX/goods/X19084/org/486/261107000056486.png"
+      },
+      {
+        "code": "X00111",
+        "name": "Omega 3",
+        "description": "Alaska E-Omega 3 en presentación individual.",
+        "photo": "https://image.atomy.com/MX/goods/X00111/org/590/250717000044590.jpg"
+      }
+    ]
+  }
+]
