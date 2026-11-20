@@ -150,8 +150,11 @@ export function render(catalog, siteUrl) {
         <noscript><img src="${esc(counter)}" alt="Visitas acumuladas del sitio" width="100" height="24" loading="lazy" decoding="async" fetchpriority="low"><style>.visit-total{display:none}</style></noscript>
       </div>
       <a class="agency-brand" href="https://matangazo.mx/" aria-label="Visitar Matangazo.mx"><img src="./assets/matangazo-oficial.png" alt="Matangazo" width="120" height="82" loading="lazy" decoding="async"></a>
-      <p class="agency-message">Digitaliza tu negocio con Presencia Web de Matangazo.</p>
-      <a class="button agency-cta" href="${esc(agency)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
+      <div class="agency-pitch">
+        <h2 class="agency-title">¿Te gustó esta página?</h2>
+        <p class="agency-message">Tu negocio también puede tener la suya con Presencia Web de Matangazo.</p>
+        <a class="button agency-cta" href="${esc(agency)}" target="_blank" rel="noopener">¡Quiero mi página web! ${arrow}</a>
+      </div>
     </div>
   </footer>
 </body>
