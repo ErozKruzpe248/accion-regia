@@ -1,15 +1,15 @@
 const escapes = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" };
 const esc = value => String(value).replace(/[&<>"']/g, char => escapes[char]);
 const title = "Acción Regia | Skincare coreano, hogar y bienestar";
-const description = "Explora la selección de Acción Regia de skincare coreano, hogar y bienestar. Consulta fichas oficiales y pide orientación por WhatsApp.";
+const description = "Explora la selección de Acción Regia de skincare coreano, hogar y bienestar. Conoce nuestros productos, visítanos en Monterrey y pide orientación por WhatsApp.";
 const whatsApp = (number, message) => `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
-const contact = whatsApp("525531163074", "Hola, me gustaría recibir información sobre un producto.");
+const contact = whatsApp("528116000722", "Hola, me gustaría recibir información sobre un producto.");
 const agency = whatsApp("528115963472", "Hola, Matangazo. Vi la página de Acción Regia y me interesa Presencia Web para mi negocio.");
 const counter = "https://hits.sh/erozkruzpe248.github.io/accion-regia.svg?label=%20&color=e30613&labelColor=e30613&style=flat-square";
 const arrow = '<span aria-hidden="true">↗</span>';
 
 function card(product, featured) {
-  const { code, name, description, photo, localPhoto } = product;
+  const { name, description, photo, localPhoto } = product;
   const size = featured ? 640 : 360;
   const url = localPhoto ?? `${photo}?w=${size}&h=${size}`;
   return `<article class="product${featured ? " featured" : ""}">
@@ -18,7 +18,6 @@ function card(product, featured) {
       ${featured ? '<p class="featured-label"><span aria-hidden="true">✦</span> Producto estrella</p>' : ""}
       <h4>${esc(name)}</h4>
       <p>${esc(description)}</p>
-      <a class="official-link" href="https://mx.atomy.com/product/${esc(code)}" target="_blank" rel="noopener" aria-label="Ver ficha oficial de ${esc(name)}">Ver ficha oficial ${arrow}</a>
     </div>
   </article>`;
 }
@@ -43,6 +42,15 @@ export function render(catalog, siteUrl) {
     "@type": "Organization",
     name: "Acción Regia",
     description,
+    telephone: "+52 81 1600 0722",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Carlos Salazar 1657, esquina con América",
+      addressLocality: "Monterrey",
+      addressRegion: "Nuevo León",
+      postalCode: "64000",
+      addressCountry: "MX"
+    },
     sameAs: catalog.map(category => category.facebook),
     ...(siteUrl ? { url: siteUrl.href, logo: new URL("assets/logo-accion-regia.png", siteUrl).href } : {})
   };
@@ -91,7 +99,7 @@ export function render(catalog, siteUrl) {
         <a class="button primary" href="#productos">EXPLORAR PRODUCTOS <span aria-hidden="true">↓</span></a>
       </div>
       <div class="hero-visual">
-        <img class="hero-image" src="./assets/portada.jpg" alt="" width="1000" height="710" fetchpriority="high" decoding="async">
+        <img class="hero-image" src="./assets/portada-pareja.jpg" alt="Pareja preparando alimentos en una cocina" width="1254" height="1254" fetchpriority="high" decoding="async">
       </div>
     </section>
     <section class="benefits shell" id="beneficios" aria-labelledby="benefits-title" data-reveal>
@@ -112,9 +120,22 @@ export function render(catalog, siteUrl) {
       </div>
     </section>
     <section class="contact shell" id="contacto" aria-labelledby="contact-title" data-reveal>
-      <div class="contact-inner">
-        <h2 id="contact-title">¿Tienes dudas sobre algún producto?</h2>
-        <a class="button contact-button" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos ${arrow}</a>
+      <div class="location-heading">
+        <h2 id="contact-title">Ubicación y contacto</h2>
+        <p>Visítanos en Monterrey o escríbenos para recibir orientación sobre nuestros productos.</p>
+        <a class="button primary" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
+      </div>
+      <div class="location-card">
+        <div class="location-details">
+          <h3>Acción Regia</h3>
+          <address>Carlos Salazar 1657, esquina con América<br>Monterrey, Nuevo León, México, C.P. 64000</address>
+          <div class="location-actions">
+            <a class="button contact-button" href="tel:+528116000722">81 1600 0722</a>
+            <a class="button contact-button" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
+            <a class="button contact-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=Carlos%20Salazar%201657%2C%20esquina%20con%20Am%C3%A9rica%2C%20Monterrey%2C%20Nuevo%20Le%C3%B3n%2C%20M%C3%A9xico%2C%2064000" target="_blank" rel="noopener">Cómo llegar ${arrow}</a>
+          </div>
+        </div>
+        <iframe class="location-map" title="Ubicación de Acción Regia en Carlos Salazar 1657, Monterrey" src="https://www.google.com/maps?q=Carlos%20Salazar%201657%2C%20esquina%20con%20Am%C3%A9rica%2C%20Monterrey%2C%20Nuevo%20Le%C3%B3n%2C%20M%C3%A9xico%2C%2064000&amp;output=embed" width="720" height="460" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </section>
   </main>
