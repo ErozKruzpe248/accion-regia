@@ -78,7 +78,7 @@ export function render(catalog, siteUrl) {
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Acción Regia · Skincare coreano, hogar y bienestar">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles.css?v=contact-actions-20261125">
   <script type="application/ld+json">${JSON.stringify(details).replace(/</g, "\\u003c")}</script>
   <script src="./app.js" defer></script>
 </head>
@@ -126,15 +126,10 @@ export function render(catalog, siteUrl) {
       <div class="location-heading">
         <h2 id="contact-title">Ubicación y contacto</h2>
         <p>Visítanos en Monterrey o escríbenos para recibir orientación sobre nuestros productos.</p>
-        <div class="contact-tools">
+        <div class="contact-tools" role="group" aria-label="Contacto y opciones para compartir">
           <a class="button primary" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
-          <div class="page-share" role="group" aria-label="Compartir la página de Acción Regia">
-            <span class="share-label">Comparte Acción Regia</span>
-            <div class="share-actions">
-              <a class="button share-button share-facebook" href="${esc(facebookShare)}" target="_blank" rel="noopener noreferrer">Compartir en Facebook ${arrow}</a>
-              <a class="button share-button share-whatsapp" href="${esc(whatsappShare)}" target="_blank" rel="noopener noreferrer">Compartir en WhatsApp ${arrow}</a>
-            </div>
-          </div>
+          <a class="button primary" href="${esc(facebookShare)}" target="_blank" rel="noopener noreferrer">Compartir en Facebook ${arrow}</a>
+          <a class="button primary" href="${esc(whatsappShare)}" target="_blank" rel="noopener noreferrer">Compartir en WhatsApp ${arrow}</a>
         </div>
       </div>
       <div class="location-card">

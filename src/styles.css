@@ -160,17 +160,14 @@ h2 { font-size: clamp(2.2rem, 4.65vw, 4rem); line-height: 1.05; }
   .location-map { min-height: 21rem; height: 21rem; }
 }
 
-/* Compartir la página: separado del contacto directo con el negocio. */
-.contact-tools { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1.25rem 2rem; }
-.page-share { min-width: 0; display: grid; gap: .5rem; }
-.share-label { color: var(--muted); font-size: .85rem; font-weight: 650; }
-.share-actions { display: flex; flex-wrap: wrap; gap: .65rem; }
-.share-button { min-height: 48px; border: 1px solid currentColor; font-size: .85rem; padding-inline: 1rem; background: var(--white); text-align: center; }
-.share-facebook { color: #1855a0; }
-.share-facebook:hover { background: #e3ecf9; }
-.share-whatsapp { color: #17653b; }
-.share-whatsapp:hover { background: #e2f2e7; }
+/* Contacto y compartir con el mismo formato de botón. */
+.contact-tools { display: grid; grid-template-columns: repeat(3, max-content); align-items: stretch; gap: .75rem; }
+.contact-tools .button { text-align: center; }
+@media (max-width: 57rem) {
+  .contact-tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .contact-tools .button { min-width: 0; padding-inline: .75rem; }
+}
 @media (max-width: 39rem) {
-  .contact-tools, .page-share { width: 100%; }
-  .share-actions .share-button { flex: 1 1 14rem; }
+  .contact-tools { gap: .4rem; }
+  .contact-tools .button { padding: .65rem .4rem; gap: .25rem; font-size: .72rem; letter-spacing: 0; }
 }
