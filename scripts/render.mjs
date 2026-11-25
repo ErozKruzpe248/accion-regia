@@ -79,7 +79,7 @@ export function render(catalog, siteUrl) {
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Acción Regia · Skincare coreano, hogar y bienestar">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./styles.css?v=contact-email-20261125">
+  <link rel="stylesheet" href="./styles.css?v=share-mobile-20261125">
   <script type="application/ld+json">${JSON.stringify(details).replace(/</g, "\\u003c")}</script>
   <script src="./app.js" defer></script>
 </head>
@@ -127,11 +127,11 @@ export function render(catalog, siteUrl) {
       <div class="location-heading">
         <h2 id="contact-title">Ubicación y contacto</h2>
         <p>Visítanos en Monterrey o escríbenos para recibir orientación sobre nuestros productos.</p>
-        <div class="contact-tools" role="group" aria-label="Contacto y opciones para compartir">
-          <a class="button primary" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
-          <a class="button primary" href="${esc(facebookShare)}" target="_blank" rel="noopener noreferrer">Compartir en Facebook ${arrow}</a>
-          <a class="button primary" href="${esc(whatsappShare)}" target="_blank" rel="noopener noreferrer">Compartir en WhatsApp ${arrow}</a>
-          <a class="button primary" href="${esc(emailShare)}">Compartir por email ${arrow}</a>
+        <h3 class="share-title" id="share-title">Compartir</h3>
+        <div class="contact-tools" role="group" aria-labelledby="share-title">
+          <a class="button primary" href="${esc(facebookShare)}" target="_blank" rel="noopener noreferrer" aria-label="Compartir la página en Facebook">Facebook ${arrow}</a>
+          <a class="button primary" href="${esc(whatsappShare)}" target="_blank" rel="noopener noreferrer" aria-label="Compartir la página en WhatsApp">WhatsApp ${arrow}</a>
+          <a class="button primary" href="${esc(emailShare)}" aria-label="Compartir la página por email">Email ${arrow}</a>
         </div>
       </div>
       <div class="location-card">

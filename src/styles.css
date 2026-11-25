@@ -160,14 +160,11 @@ h2 { font-size: clamp(2.2rem, 4.65vw, 4rem); line-height: 1.05; }
   .location-map { min-height: 21rem; height: 21rem; }
 }
 
-/* Contacto y compartir con el mismo formato de botón. */
-.contact-tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; gap: .75rem; }
-.contact-tools .button { min-width: 0; text-align: center; }
-@media (max-width: 57rem) {
-  .contact-tools { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .contact-tools .button { padding-inline: .6rem; gap: .4rem; }
-}
+/* Compartir: etiquetas breves y tres botones en una sola fila. */
+.share-title { font: 650 1rem/1.4 "Segoe UI", system-ui, sans-serif; color: var(--ink); margin-bottom: .65rem; }
+.contact-tools { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: .75rem; max-width: 42rem; }
+.contact-tools .button { min-width: 0; padding-inline: .75rem; gap: .4rem; letter-spacing: 0; text-align: center; white-space: nowrap; }
 @media (max-width: 39rem) {
-  .contact-tools { gap: .3rem; }
-  .contact-tools .button { padding: .65rem .25rem; gap: .15rem; font-size: .68rem; letter-spacing: 0; overflow-wrap: anywhere; }
+  .contact-tools { gap: .4rem; }
+  .contact-tools .button { padding: .65rem .4rem; gap: .25rem; font-size: .75rem; }
 }
