@@ -4,6 +4,7 @@ const title = "Acción Regia | Skincare coreano, hogar y bienestar";
 const description = "Explora la selección de Acción Regia de skincare coreano, hogar y bienestar. Conoce nuestros productos, visítanos en Monterrey y pide orientación por WhatsApp.";
 const whatsApp = (number, message) => `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
 const contact = whatsApp("528116000722", "Hola, me gustaría recibir información sobre un producto.");
+const secondContact = whatsApp("528143934857", "Hola, me gustaría recibir información sobre un producto.");
 const agency = whatsApp("528115963472", "Hola, Matangazo. Vi la página de Acción Regia y me interesa Presencia Web para mi negocio.");
 const counter = "https://hits.sh/erozkruzpe248.github.io/accion-regia.svg?label=%20&color=e30613&labelColor=e30613&style=flat-square";
 const arrow = '<span aria-hidden="true">↗</span>';
@@ -45,7 +46,7 @@ export function render(catalog, siteUrl) {
     "@type": "Organization",
     name: "Acción Regia",
     description,
-    telephone: "+52 81 1600 0722",
+    telephone: ["+52 81 1600 0722", "+52 81 8375 5177", "+52 81 4393 4857"],
     address: {
       "@type": "PostalAddress",
       streetAddress: "Carlos Salazar 1657, esquina con América",
@@ -145,6 +146,8 @@ export function render(catalog, siteUrl) {
           <div class="location-actions">
             <a class="button contact-button" href="tel:+528116000722">81 1600 0722</a>
             <a class="button contact-button" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
+            <a class="button contact-button" href="tel:+528183755177">Oficina: 81 8375 5177</a>
+            <a class="button contact-button" href="${esc(secondContact)}" target="_blank" rel="noopener">WhatsApp: 81 4393 4857 ${arrow}</a>
             <a class="button contact-button" href="https://www.google.com/maps/dir/?api=1&amp;destination=Carlos%20Salazar%201657%2C%20esquina%20con%20Am%C3%A9rica%2C%20Monterrey%2C%20Nuevo%20Le%C3%B3n%2C%20M%C3%A9xico%2C%2064000" target="_blank" rel="noopener">Cómo llegar ${arrow}</a>
           </div>
         </div>
