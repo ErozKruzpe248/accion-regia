@@ -54,6 +54,9 @@ export function render(catalog, siteUrl) {
     sameAs: catalog.map(category => category.facebook),
     ...(siteUrl ? { url: siteUrl.href, logo: new URL("assets/logo-accion-regia.png", siteUrl).href } : {})
   };
+  const sharePage = siteUrl?.href ?? "https://erozkruzpe248.github.io/accion-regia/";
+  const facebookShare = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(sharePage);
+  const whatsappShare = "https://wa.me/?text=" + encodeURIComponent("Conoce Acción Regia: " + sharePage);
   const socialImage = siteUrl ? new URL("assets/accion-regia-social.jpg", siteUrl).href : "./assets/accion-regia-social.jpg";
   return `<!doctype html>
 <html lang="es-MX">
@@ -86,7 +89,7 @@ export function render(catalog, siteUrl) {
       <a class="brand" href="#inicio"><img src="./assets/logo-accion-regia.png" alt="Acción Regia · Skincare Coreano" width="330" height="196" decoding="async"></a>
       <button class="menu-button" type="button" aria-controls="nav" aria-expanded="false" hidden>Menú <span aria-hidden="true">☰</span></button>
       <nav id="nav" aria-label="Navegación principal">
-        <a href="#beneficios">Nosotros</a><a href="#productos">Productos</a><a class="nav-contact" href="#contacto">Contacto ${arrow}</a>
+        <a href="#productos">Productos</a><a class="nav-contact" href="#contacto">Contacto ${arrow}</a>
       </nav>
     </div>
   </header>
@@ -123,7 +126,16 @@ export function render(catalog, siteUrl) {
       <div class="location-heading">
         <h2 id="contact-title">Ubicación y contacto</h2>
         <p>Visítanos en Monterrey o escríbenos para recibir orientación sobre nuestros productos.</p>
-        <a class="button primary" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
+        <div class="contact-tools">
+          <a class="button primary" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
+          <div class="page-share" role="group" aria-label="Compartir la página de Acción Regia">
+            <span class="share-label">Comparte Acción Regia</span>
+            <div class="share-actions">
+              <a class="button share-button share-facebook" href="${esc(facebookShare)}" target="_blank" rel="noopener noreferrer">Compartir en Facebook ${arrow}</a>
+              <a class="button share-button share-whatsapp" href="${esc(whatsappShare)}" target="_blank" rel="noopener noreferrer">Compartir en WhatsApp ${arrow}</a>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="location-card">
         <div class="location-details">
