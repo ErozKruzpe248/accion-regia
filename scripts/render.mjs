@@ -9,16 +9,19 @@ const counter = "https://hits.sh/erozkruzpe248.github.io/accion-regia.svg?label=
 const arrow = '<span aria-hidden="true">↗</span>';
 
 function card(product, featured) {
-  const { name, description, photo, localPhoto } = product;
+  const { code, name, description, photo, localPhoto } = product;
   const size = featured ? 640 : 360;
   const url = localPhoto ?? `${photo}?w=${size}&h=${size}`;
   return `<article class="product${featured ? " featured" : ""}">
+    <a class="product-link" href="https://mx.atomy.com/product/${esc(code)}" target="_blank" rel="noopener noreferrer" aria-label="Ver ficha oficial de ${esc(name)} en Atomy">
     <div class="product-media"><img src="${esc(url)}" width="${size}" height="${size}" alt="${esc(name)}" loading="lazy" decoding="async"></div>
     <div class="product-copy">
       ${featured ? '<p class="featured-label"><span aria-hidden="true">✦</span> Producto estrella</p>' : ""}
       <h4>${esc(name)}</h4>
       <p>${esc(description)}</p>
+      <span class="product-link-label">Ver ficha oficial ${arrow}</span>
     </div>
+    </a>
   </article>`;
 }
 
@@ -79,7 +82,7 @@ export function render(catalog, siteUrl) {
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Acción Regia · Skincare coreano, hogar y bienestar">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./styles.css?v=share-mobile-20261125">
+  <link rel="stylesheet" href="./styles.css?v=products-hours-20261125">
   <script type="application/ld+json">${JSON.stringify(details).replace(/</g, "\\u003c")}</script>
   <script src="./app.js" defer></script>
 </head>
@@ -138,6 +141,7 @@ export function render(catalog, siteUrl) {
         <div class="location-details">
           <h3>Acción Regia</h3>
           <address>Carlos Salazar 1657, esquina con América<br>Monterrey, Nuevo León, México, C.P. 64000</address>
+          <p class="location-hours"><strong>Horario</strong><br>Lunes a viernes · 11:00 a. m. a 3:00 p. m.</p>
           <div class="location-actions">
             <a class="button contact-button" href="tel:+528116000722">81 1600 0722</a>
             <a class="button contact-button" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>

@@ -168,3 +168,10 @@ h2 { font-size: clamp(2.2rem, 4.65vw, 4rem); line-height: 1.05; }
   .contact-tools { gap: .4rem; }
   .contact-tools .button { padding: .65rem .4rem; gap: .25rem; font-size: .75rem; }
 }
+
+/* Fichas oficiales: toda la tarjeta es un enlace accesible. */
+.product-link { display: flex; flex-direction: column; flex: 1; color: inherit; text-decoration: none; }
+.product-link:focus-visible { outline-offset: -4px; border-radius: inherit; }
+.product-link-label { display: inline-flex; align-items: center; gap: .4rem; min-height: 44px; margin-top: auto; padding-top: .4rem; font-size: .82rem; font-weight: 730; }
+.product-link:hover .product-link-label { text-decoration: underline; text-underline-offset: .25em; }
+.location-hours { margin-bottom: 1.4rem; line-height: 1.8; }
