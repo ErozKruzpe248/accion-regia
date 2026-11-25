@@ -161,13 +161,13 @@ h2 { font-size: clamp(2.2rem, 4.65vw, 4rem); line-height: 1.05; }
 }
 
 /* Contacto y compartir con el mismo formato de botón. */
-.contact-tools { display: grid; grid-template-columns: repeat(3, max-content); align-items: stretch; gap: .75rem; }
-.contact-tools .button { text-align: center; }
+.contact-tools { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: stretch; gap: .75rem; }
+.contact-tools .button { min-width: 0; text-align: center; }
 @media (max-width: 57rem) {
-  .contact-tools { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  .contact-tools .button { min-width: 0; padding-inline: .75rem; }
+  .contact-tools { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .contact-tools .button { padding-inline: .6rem; gap: .4rem; }
 }
 @media (max-width: 39rem) {
-  .contact-tools { gap: .4rem; }
-  .contact-tools .button { padding: .65rem .4rem; gap: .25rem; font-size: .72rem; letter-spacing: 0; }
+  .contact-tools { gap: .3rem; }
+  .contact-tools .button { padding: .65rem .25rem; gap: .15rem; font-size: .68rem; letter-spacing: 0; overflow-wrap: anywhere; }
 }

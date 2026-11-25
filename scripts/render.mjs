@@ -57,6 +57,7 @@ export function render(catalog, siteUrl) {
   const sharePage = siteUrl?.href ?? "https://erozkruzpe248.github.io/accion-regia/";
   const facebookShare = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(sharePage);
   const whatsappShare = "https://wa.me/?text=" + encodeURIComponent("Conoce Acción Regia: " + sharePage);
+  const emailShare = "mailto:?subject=" + encodeURIComponent("Conoce Acción Regia") + "&body=" + encodeURIComponent("Te comparto la página de Acción Regia:\r\n\r\n" + sharePage);
   const socialImage = siteUrl ? new URL("assets/accion-regia-social.jpg", siteUrl).href : "./assets/accion-regia-social.jpg";
   return `<!doctype html>
 <html lang="es-MX">
@@ -78,7 +79,7 @@ export function render(catalog, siteUrl) {
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Acción Regia · Skincare coreano, hogar y bienestar">
   <link rel="icon" href="./assets/favicon.png" type="image/png">
-  <link rel="stylesheet" href="./styles.css?v=contact-actions-20261125">
+  <link rel="stylesheet" href="./styles.css?v=contact-email-20261125">
   <script type="application/ld+json">${JSON.stringify(details).replace(/</g, "\\u003c")}</script>
   <script src="./app.js" defer></script>
 </head>
@@ -130,6 +131,7 @@ export function render(catalog, siteUrl) {
           <a class="button primary" href="${esc(contact)}" target="_blank" rel="noopener">Escríbenos por WhatsApp ${arrow}</a>
           <a class="button primary" href="${esc(facebookShare)}" target="_blank" rel="noopener noreferrer">Compartir en Facebook ${arrow}</a>
           <a class="button primary" href="${esc(whatsappShare)}" target="_blank" rel="noopener noreferrer">Compartir en WhatsApp ${arrow}</a>
+          <a class="button primary" href="${esc(emailShare)}">Compartir por email ${arrow}</a>
         </div>
       </div>
       <div class="location-card">
